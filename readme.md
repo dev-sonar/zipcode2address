@@ -1,21 +1,72 @@
-## Lumen PHP Framework
+## Zipcode2Address
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-circleci]][link-circleci]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## Install
 
-## Official Documentation
+Via Composer
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+``` bash
+$ composer require sonar/zipcode2address:dev-master
+```
 
-## Security Vulnerabilities
+<!--
+## Usage
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+``` php
+$skeleton = new League\Skeleton();
+echo $skeleton->echoPhrase('Hello, League!');
+```
 
-### License
+## Change log
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+
+## Testing
+
+``` bash
+$ composer test
+```
+
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
+
+
+## Security
+
+If you discover any security related issues, please email :author_email instead of using the issue tracker.
+
+-->
+
+## Credits
+
+- [dev-sonar][link-author]
+- [All Contributors][link-contributors]
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/sonar/zipcode2address.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-circleci]: https://circleci.com/gh/dev-sonar/zipcode2address.svg?style=shield&circle-token=d9c8812dec2ac73a00306fcfadaaa1528b6f8ce2
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/dev-sonar/zipcode2address.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/dev-sonar/zipcode2address.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/sonar/zipcode2address.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/sonar/zipcode2address
+[link-circleci]: https://circleci.com/gh/dev-sonar/zipcode2address
+[link-scrutinizer]: https://scrutinizer-ci.com/g/dev-sonar/zipcode2address/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/dev-sonar/zipcode2address
+[link-downloads]: https://packagist.org/packages/sonar/zipcode2address
+[link-author]: https://github.com/dev-sonar
+[link-contributors]: ../../contributors
+~
