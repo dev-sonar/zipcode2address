@@ -46,16 +46,14 @@ class ZipcodeTransfer
     }
     public function getData()
     {
-        $this->addData();
+        if (isset($this->prev_csv)) {
+            $this->addData();
+        }
         return $this->data;
     }
 
     private function addData()
     {
-        if (isset($this->prev_csv) === false) {
-            $this->prev_csv = null;
-            return;
-        }
         $counter = isset($this->counter[$this->prev_csv[2]]) ? $this->counter[$this->prev_csv[2]] : 0;
         $this->prev_csv[1] = sprintf("%07s%02d",$this->prev_csv[2],$counter);
         foreach ( [3,4,5] as $num ) {
