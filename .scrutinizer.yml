@@ -6,6 +6,9 @@ build:
                 'date.timezone': 'Asia/Tokyo'
 
     tests:
+        brfore:
+            -
+                environment: { APP_ENV:local, APP_DEBUG:true, APP_KEY:SonarDevZipcode, DB_CONNECTION:sqlite, CACHE_DRIVER:file, QUEUE_DRIVER:sync }
         override:
             -
                 command: 'phpunit --coverage-clover=some-file'
