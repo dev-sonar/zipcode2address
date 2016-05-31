@@ -37,7 +37,7 @@ class ZipcodeTableCommandTest extends TestCase
     public function testindex()
     {
         $obj = new MainController;
-        $this->assertTrue($obj->index($this->request) instanceof View);
+        $this->assertTrue($obj->index() instanceof View);
     }
     public function testjs()
     {

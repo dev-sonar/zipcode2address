@@ -52,7 +52,7 @@ class ImportZipcode extends Command
     private function getFile($url)
     {
         $path = implode(DIRECTORY_SEPARATOR ,['app','ken_all.zip']);
-        $data = $this->curl->to(self::URL)->get();
+        $data = $this->curl->to($url)->get();
         $this->filesystem->put(storage_path($path),$data);
         $zip_file = str_replace(base_path() . DIRECTORY_SEPARATOR ,'',storage_path($path));
         $extract_path = str_replace(base_path() . DIRECTORY_SEPARATOR  ,'',storage_path('app'));
