@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 
 class MainController extends Controller
 {
@@ -17,7 +18,7 @@ class MainController extends Controller
         if ( $id ) {
             $result = app('db')->table('zipcodes')->select(['id','name','zipcode_prefecture_id as prefecture_id','zipcode_prefecture_name as prefecture_name','zipcode_city_id as zipcode_city_id','zipcode_city_name as city_name'])->where('id','=',$id)->first();
         }
-        return response()->json($result);
+        return new JsonResponse($result);
     }
 
     public function getByZipcode(Request $request)
@@ -28,7 +29,7 @@ class MainController extends Controller
         if ( $code ) {
             $result = app('db')->table('zipcodes')->select(['id','name','zipcode_prefecture_id as prefecture_id','zipcode_prefecture_name as prefecture_name','zipcode_city_id as zipcode_city_id','zipcode_city_name as city_name'])->where('code','=',$code)->get();
         }
-        return response()->json($result);
+        return new JsonResponse($result);
     }
     public function js()
     {
