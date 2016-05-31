@@ -1,7 +1,7 @@
 <?php
 namespace Test\App\Console\Commands;
 
-use Test\App\TestCase;
+use Test\TestCase;
 use Mockery;
 use App\ZipcodeTransfer;
 use Illuminate\Filesystem\Filesystem;

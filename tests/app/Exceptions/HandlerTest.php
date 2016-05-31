@@ -2,7 +2,7 @@
 namespace Test\App\Exceptions;
 
 use Mockery;
-use Test\App\TestCase;
+use Test\TestCase;
 
 use App\Exceptions\Handler;
 use Exception;

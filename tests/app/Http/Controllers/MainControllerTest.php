@@ -1,7 +1,7 @@
 <?php
 namespace Test\App\Http\Controllers;
 
-use Test\App\TestCase;
+use Test\TestCase;
 use Mockery;
 
 use App\Http\Controllers\MainController;
@@ -11,7 +11,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\View\View;
 
 
-class ZipcodeTableCommandTest extends TestCase
+class MainControllerTest extends TestCase
 {
 
     public function setUp()

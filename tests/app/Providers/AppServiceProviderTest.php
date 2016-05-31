@@ -1,7 +1,7 @@
 <?php
 namespace Test\App\Providers;
 
-use Test\App\TestCase;
+use Test\TestCase;
 use Mockery;
 
 use App\Providers\AppServiceProvider;
