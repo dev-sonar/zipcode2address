@@ -6,11 +6,16 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
+        "ext-pdo_sqlite": "*",
         "laravel/lumen-framework": "5.2.*",
-        "vlucas/phpdotenv": "~2.2"
+        "vlucas/phpdotenv": "~2.2",
+        "chumper/zipper": "0.6.x",
+        "ixudra/curl": "6.*",
+	"sonar/common": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "4.*"
     },
     "autoload": {
@@ -19,8 +24,10 @@
         }
     },
     "autoload-dev": {
+        "psr-4": {
+            "Test\\App\\": "tests"
+        },
         "classmap": [
-            "tests/",
             "database/"
         ]
     }

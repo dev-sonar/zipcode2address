@@ -11,6 +11,7 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
-});
+$app->get('/', 'MainController@index');
+$app->get('zipcode2address.js', 'MainController@js');
+$app->get('get', ['as' => 'getByZipcode','uses' => 'MainController@getByZipcode']);
+$app->get('getById', ['as' => 'getById','uses' => 'MainController@getById']);
