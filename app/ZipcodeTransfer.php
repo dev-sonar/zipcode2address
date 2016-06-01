@@ -23,24 +23,19 @@ class ZipcodeTransfer
         if ( isset($this->prev_csv) === false ) {
             $this->prev_csv = $csv;
             return;
-
         }
         $prev_csv = $this->prev_csv;
         if ( $prev_csv[2] == $csv[2] && $csv[12] == '0' ) {
             foreach([5,8] as $num ) {
-                if ( $csv[$num] != $prev_csv[$num] ) {
-                    $csv[$num] = $prev_csv[$num] . $csv[$num];
-                }
+                $csv[$num] = $prev_csv[$num] . $csv[$num];
             }
         } else {
             $this->prev_csv = $prev_csv;
             $this->addData();
 
-            if( isset($this->counter[$prev_csv[2]]) ) {
-                $this->counter[$prev_csv[2]]++;
-            } else {
-                $this->counter[$prev_csv[2]] = 1;
-            }
+            $counter = isset($this->counter[$prev_csv[2]]) ? $this->counter[$prev_csv[2]] : 0;
+            $counter++;
+            $this->counter[$prev_csv[2]] = $counter;
         }
         $this->prev_csv = $csv;
     }
