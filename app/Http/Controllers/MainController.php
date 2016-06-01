@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Response;
 
 class MainController extends Controller
 {
@@ -33,6 +34,8 @@ class MainController extends Controller
     }
     public function js()
     {
-        return response()->make(view('js'),200,['Content-type'=>'text/javascript']);
+	$response = new Response(view('js'),200);
+	$response->header('Content-Type','text/javascript');
+	return $response;
     }
 }
